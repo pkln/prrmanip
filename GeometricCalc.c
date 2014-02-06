@@ -69,8 +69,8 @@ int Motion(Point p, float angle) {
 	float temprun[3];
 	Point vertex[3];
 	vertex[0]=p;
-	vertex[1]=Location(p, ROTLINK, angle);
-	vertex[2]=Location(p, ROTLINK, angle+PI/3);
+	vertex[1]=Location(p, FLOATEDGE, angle);
+	vertex[2]=Location(p, FLOATEDGE, angle+PI/3);
 	for(i=0;i<3;i++){
 		a[i]=Side(Dist(baseVert[i],vertex[i]),PerpDist(vertex[i],edge[i]));
 		b[i]=Side(ROTLINK,PerpDist(vertex[i],edge[i]));
